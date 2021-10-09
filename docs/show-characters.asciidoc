@@ -1,0 +1,64 @@
+= Show characters and whitespaces
+
+== Features
+
+- Show Unicode value in the status line.
+- Show consecutive whitespaces, then paint over indent.
+- Show empty lines and trailing whitespaces.
+- Show odd and deep indent.
+- Show limit of 80 characters.
+- Show other whitespaces (tabs, non-breaking-spaces).
+- Show various characters (Unicode characters, math symbols).
+
+== Usage
+
+Run `add-cursor-character-unicode-expansion` and add `%opt{cursor_character_unicode}` expansion to your status line.
+Show characters with `show-characters`.
+Add new characters with `add-character <name> <pattern> <face>`.
+
+== Configuration
+
+Show characters:
+
+--------------------------------------------------------------------------------
+show-characters
+--------------------------------------------------------------------------------
+
+Status line:
+
+--------------------------------------------------------------------------------
+add-cursor-character-unicode-expansion
+set-option global modelinefmt '%opt{cursor_character_unicode}'
+--------------------------------------------------------------------------------
+
+== Adding characters
+
+--------------------------------------------------------------------------------
+add-character cats 🐈 yellow
+--------------------------------------------------------------------------------
+
+https://unicode-table.com
+
+== Commands
+
+- `show-characters`
+- `hide-characters`
+- `add-character`
+- `add-cursor-character-unicode-expansion`
+
+== Faces
+
+- `EmphasisCharacter`
+- `StrongCharacter`
+- `MathSymbol`
+
+- `WhitespaceIgnore`
+- `WhitespaceOk`
+- `WhitespaceError`
+
+- `Indent`
+- `Tab`
+- `Newline`
+- `NonBreakingSpace`
+- `EmptyLine`
+- `TrailingWhitespace`
