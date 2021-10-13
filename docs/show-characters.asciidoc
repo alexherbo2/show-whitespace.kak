@@ -3,7 +3,7 @@
 == Features
 
 - Show Unicode value in the status line.
-- Show consecutive whitespaces, then paint over indent.
+- Show two consecutive whitespaces, then paint over indent.
 - Show empty lines and trailing whitespaces.
 - Show odd and deep indent.
 - Show limit of 80 characters.

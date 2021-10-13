@@ -44,8 +44,8 @@ define-command -override add-character -params 3 -docstring 'add-character <name
   add-highlighter -override "shared/show-characters/%arg{1}" regex %arg{2} "0:%arg{3}"
 }
 
-# Show consecutive whitespaces, then paint over indent.
-add-character multiple-whitespaces '\h{2,}' WhitespaceError
+# Show two consecutive whitespaces, then paint over indent.
+add-character two-consecutive-whitespaces '\H\K\h{2}(?=\H)' WhitespaceError
 add-character indent '^\h+' Indent
 
 # Show empty lines and trailing whitespaces.
