@@ -1,16 +1,16 @@
-# show-characters.kak
+# show-whitespaces.kak
 
 ###### [Documentation] | [Source]
 
-[Source]: rc/show-characters.kak
-[Documentation]: docs/show-characters.asciidoc
+[Source]: rc/show-whitespaces.kak
+[Documentation]: docs/show-whitespaces.asciidoc
 
-Show characters and whitespaces for [Kakoune].
+Refined show whitespaces for [Kakoune].
 
 [Kakoune]: https://kakoune.org
 
 ## Installation
 
 ``` sh
-git clone https://github.com/alexherbo2/show-characters.kak ~/.config/kak/autoload/show-characters
+git clone https://github.com/alexherbo2/show-whitespaces.kak ~/.config/kak/autoload/show-whitespaces
 ```

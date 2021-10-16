@@ -1,0 +1,44 @@
+= Refined show whitespaces
+
+== Features
+
+- Individual faces for whitespaces (tabs, newlines, non-breaking-spaces) and indent.
+- Show whitespace oddities:
+  - Empty lines and trailing whitespaces (only shown when not in insert mode).
+  - Odd and mixed indent.
+- Show consecutive whitespaces.
+- Show limit of 80 characters (useful for horizontal lines).
+
+== Usage
+
+Show whitespaces with `show-whitespaces`.
+Configure the faces to your liking.
+
+:show-whitespaces: https://github.com/mawww/kakoune/blob/master/doc/pages/highlighters.asciidoc#:~:text=show-whitespaces
+:whitespace: https://github.com/mawww/kakoune/blob/master/doc/pages/faces.asciidoc#:~:text=Whitespace
+
+You might want a dimmed foreground for the {whitespace}[`Whitespace`] face or
+pass additional options to the {show-whitespaces}[`show-whitespaces`] highlighter.
+
+== Commands
+
+- `show-whitespaces`
+- `hide-whitespaces`
+
+== Faces
+
+- `Tab`
+- `Newline`
+- `NonBreakingSpace`
+
+- `Indent`
+- `EmptyLine`
+- `TrailingWhitespace`
+
+- `OddIndent`
+- `MixedIndent`
+- `ConsecutiveWhitespaces`
+- `Limit`
+
+- `ExtraWhitespace`
+- `OddWhitespace`
