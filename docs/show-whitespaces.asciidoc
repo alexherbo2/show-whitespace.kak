@@ -20,6 +20,12 @@ Configure the faces to your liking.
 You might want a dimmed foreground for the {whitespace}[`Whitespace`] face or
 pass additional options to the {show-whitespaces}[`show-whitespaces`] highlighter.
 
+== Configuration
+
+--------------------------------------------------------------------------------
+set-face global ConsecutiveWhitespaces "rgb:%opt{comment}+f@Whitespace"
+--------------------------------------------------------------------------------
+
 == Commands
 
 - `show-whitespaces`
