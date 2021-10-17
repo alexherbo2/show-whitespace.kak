@@ -23,6 +23,10 @@ pass additional options to the {show-whitespaces}[`show-whitespaces`] highlighte
 == Configuration
 
 --------------------------------------------------------------------------------
+# Highlighters
+show-whitespaces
+
+# Faces
 set-face global ConsecutiveWhitespaces "rgb:%opt{comment}+f@Whitespace"
 --------------------------------------------------------------------------------
 
