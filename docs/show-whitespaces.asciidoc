@@ -2,12 +2,12 @@
 
 == Features
 
-- Individual faces for whitespaces (tabs, newlines, non-breaking-spaces) and indent.
-- Show whitespace oddities:
-  - Empty lines and trailing whitespaces (only shown when not in insert mode).
-  - Odd and mixed indent.
-- Show consecutive whitespaces.
-- Show limit of 80 characters (useful for horizontal lines).
+* Individual faces for whitespaces (tabs, newlines, non-breaking-spaces) and indent.
+* Show whitespace oddities:
+  ** Empty lines and trailing whitespaces (only shown when not in insert mode).
+  ** Odd and mixed indent.
+* Show consecutive whitespaces.
+* Show limit of 80 characters (useful for horizontal lines).
 
 == Usage
 
@@ -31,14 +31,20 @@ pass additional options to the {show-whitespaces}[`show-whitespaces`] highlighte
 - `Newline`
 - `NonBreakingSpace`
 
+//-
+
 - `Indent`
 - `EmptyLine`
 - `TrailingWhitespace`
+
+//-
 
 - `OddIndent`
 - `MixedIndent`
 - `ConsecutiveWhitespaces`
 - `Limit`
+
+//-
 
 - `ExtraWhitespace`
 - `OddWhitespace`
