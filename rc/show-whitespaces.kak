@@ -13,7 +13,7 @@ set-face global TrailingWhitespace ExtraWhitespace
 
 set-face global OddIndent OddWhitespace
 set-face global MixedIndent OddWhitespace
-set-face global ConsecutiveWhitespaces 'bright-magenta+f@Whitespace'
+set-face global ConsecutiveWhitespaces 'blue+f@Whitespace'
 set-face global Limit 'green+f@Whitespace'
 
 set-face global ExtraWhitespace OddWhitespace
