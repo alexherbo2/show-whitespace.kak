@@ -58,11 +58,13 @@ define-command -override show-whitespaces -params .. -shell-script-candidates %[
   hook -group show-whitespaces -always global ModeChange 'push:normal:insert' %{
     set-face window EmptyLine Whitespace
     set-face window TrailingWhitespace Whitespace
+    set-face window ConsecutiveWhitespaces Whitespace
 
     # Restore
     hook -always -once window ModeChange 'pop:insert:normal' %{
       unset-face window EmptyLine
       unset-face window TrailingWhitespace
+      unset-face window ConsecutiveWhitespaces
     }
   }
 }
