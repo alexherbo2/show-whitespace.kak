@@ -4,7 +4,7 @@
 
 * Individual faces for whitespaces (tabs, newlines, non-breaking-spaces) and indent.
 * Show whitespace oddities:
-  ** Empty lines and trailing whitespaces (only shown when not in insert mode).
+  ** Trailing whitespaces (only shown when not in insert mode).
   ** Odd and mixed indent.
 * Show consecutive whitespaces.
 * Show limit of 80 characters (useful for horizontal lines).
@@ -48,7 +48,6 @@ set-face global Whitespace "rgb:%opt{non_text}+f"
 //-
 
 - `Indent`
-- `EmptyLine`
 - `TrailingWhitespace`
 
 //-

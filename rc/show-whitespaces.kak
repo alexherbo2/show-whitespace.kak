@@ -8,7 +8,6 @@ set-face global Newline Whitespace
 set-face global NonBreakingSpace OddWhitespace
 
 set-face global Indent Whitespace
-set-face global EmptyLine ExtraWhitespace
 set-face global TrailingWhitespace ExtraWhitespace
 
 set-face global OddIndent OddWhitespace
@@ -36,8 +35,7 @@ add-highlighter -override shared/whitespaces/non-breaking-spaces regex ' +' '0:
 add-highlighter -override shared/whitespaces/consecutive-whitespaces regex '\h{2,}' '0:ConsecutiveWhitespaces'
 add-highlighter -override shared/whitespaces/indent regex '^\h+' '0:Indent'
 
-# Show empty lines and trailing whitespaces.
-add-highlighter -override shared/whitespaces/empty-lines regex '^\h+$' '0:EmptyLine'
+# Show trailing whitespaces.
 add-highlighter -override shared/whitespaces/trailing-whitespaces regex '\h+$' '0:TrailingWhitespace'
 
 # Show odd and mixed indent.
@@ -56,13 +54,11 @@ define-command -override show-whitespaces -params .. -shell-script-candidates %[
   # Only shown when not in insert mode.
   remove-hooks global show-whitespaces
   hook -group show-whitespaces -always global ModeChange 'push:normal:insert' %{
-    set-face window EmptyLine Whitespace
     set-face window TrailingWhitespace Whitespace
     set-face window ConsecutiveWhitespaces Whitespace
 
     # Restore
     hook -always -once window ModeChange 'pop:insert:normal' %{
-      unset-face window EmptyLine
       unset-face window TrailingWhitespace
       unset-face window ConsecutiveWhitespaces
     }
