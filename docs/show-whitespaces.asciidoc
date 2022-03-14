@@ -41,23 +41,31 @@ set-face global Whitespace "rgb:%opt{non_text}+f"
 
 == Faces
 
-- `Tab`
-- `Newline`
-- `NonBreakingSpace`
+Whitespace characters:
+
+- `Tab` ⇒ `WhitespaceError`
+- `Newline` ⇒ `Whitespace`
+- `NonBreakingSpace` ⇒ `WhitespaceError`
 
 //-
 
-- `Indent`
-- `TrailingWhitespace`
+Indentation rules:
+
+- `Indent` ⇒ `Whitespace`
+- `MixedIndent` ⇒ `WhitespaceError`
+- `OddIndent` ⇒ `WhitespaceError`
 
 //-
 
-- `OddIndent`
-- `MixedIndent`
-- `ConsecutiveWhitespace`
+Extra whitespace:
+
+- `TrailingWhitespace` ⇒ `WhitespaceError`
+- `ConsecutiveWhitespace` ⇒ `WhitespaceWarning`
 
 //-
 
-- `WhitespaceRuler`
-- `WhitespaceError`
-- `WhitespaceWarning`
+Generic faces:
+
+- `WhitespaceRuler` ⇒ `green+f`
+- `WhitespaceError` ⇒ `red+f`
+- `WhitespaceWarning` ⇒ `red+f`

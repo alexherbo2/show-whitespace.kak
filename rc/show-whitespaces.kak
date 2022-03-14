@@ -3,17 +3,21 @@
 
 # Faces ────────────────────────────────────────────────────────────────────────
 
+# Whitespace characters:
 set-face global Tab WhitespaceError
 set-face global Newline Whitespace
 set-face global NonBreakingSpace WhitespaceError
 
+# Indentation rules:
 set-face global Indent Whitespace
-set-face global TrailingWhitespace WhitespaceError
-
-set-face global OddIndent WhitespaceError
 set-face global MixedIndent WhitespaceError
+set-face global OddIndent WhitespaceError
+
+# Extra whitespace:
+set-face global TrailingWhitespace WhitespaceError
 set-face global ConsecutiveWhitespace WhitespaceWarning
 
+# Generic faces:
 set-face global WhitespaceRuler 'green+f'
 set-face global WhitespaceError 'red+f'
 set-face global WhitespaceWarning 'red+f'
