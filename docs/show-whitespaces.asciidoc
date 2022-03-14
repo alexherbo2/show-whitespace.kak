@@ -54,10 +54,10 @@ set-face global Whitespace "rgb:%opt{non_text}+f"
 
 - `OddIndent`
 - `MixedIndent`
-- `ConsecutiveWhitespaces`
-- `Limit`
+- `ConsecutiveWhitespace`
 
 //-
 
-- `ExtraWhitespace`
-- `OddWhitespace`
+- `WhitespaceRuler`
+- `WhitespaceError`
+- `WhitespaceWarning`

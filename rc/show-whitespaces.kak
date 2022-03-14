@@ -3,20 +3,20 @@
 
 # Faces ────────────────────────────────────────────────────────────────────────
 
-set-face global Tab Whitespace
+set-face global Tab WhitespaceError
 set-face global Newline Whitespace
-set-face global NonBreakingSpace OddWhitespace
+set-face global NonBreakingSpace WhitespaceError
 
 set-face global Indent Whitespace
-set-face global TrailingWhitespace ExtraWhitespace
+set-face global TrailingWhitespace WhitespaceError
 
-set-face global OddIndent OddWhitespace
-set-face global MixedIndent OddWhitespace
-set-face global ConsecutiveWhitespaces 'blue+f@Whitespace'
-set-face global Limit 'green+f@Whitespace'
+set-face global OddIndent WhitespaceError
+set-face global MixedIndent WhitespaceError
+set-face global ConsecutiveWhitespace WhitespaceWarning
 
-set-face global ExtraWhitespace OddWhitespace
-set-face global OddWhitespace 'red+f@Whitespace'
+set-face global WhitespaceRuler 'green+f'
+set-face global WhitespaceError 'red+f'
+set-face global WhitespaceWarning 'red+f'
 
 # Highlighters ─────────────────────────────────────────────────────────────────
 
@@ -32,7 +32,7 @@ add-highlighter -override shared/whitespaces/newlines regex '\n+' '0:Newline'
 add-highlighter -override shared/whitespaces/non-breaking-spaces regex ' +' '0:NonBreakingSpace'
 
 # Show consecutive whitespaces, then paint over indent.
-add-highlighter -override shared/whitespaces/consecutive-whitespaces regex '\h{2,}' '0:ConsecutiveWhitespaces'
+add-highlighter -override shared/whitespaces/consecutive-whitespaces regex '\h{2,}' '0:ConsecutiveWhitespace'
 add-highlighter -override shared/whitespaces/indent regex '^\h+' '0:Indent'
 
 # Show trailing whitespaces.
@@ -43,7 +43,7 @@ add-highlighter -override shared/whitespaces/odd-indent regex '^( {1}| {3}| {5}|
 add-highlighter -override shared/whitespaces/mixed-indent regex '^(\t+ | +\t)\h*' '0:MixedIndent'
 
 # Show limit of 80 characters.
-add-highlighter -override shared/whitespaces/limit regex '(?S)^.{80}$\K\n' '0:Limit'
+add-highlighter -override shared/whitespaces/ruler regex '(?S)^.{80}$\K\n' '0:WhitespaceRuler'
 
 # Commands ─────────────────────────────────────────────────────────────────────
 
@@ -55,12 +55,12 @@ define-command -override show-whitespaces -params .. -shell-script-candidates %[
   remove-hooks global show-whitespaces
   hook -group show-whitespaces -always global ModeChange 'push:normal:insert' %{
     set-face window TrailingWhitespace Whitespace
-    set-face window ConsecutiveWhitespaces Whitespace
+    set-face window ConsecutiveWhitespace Whitespace
 
     # Restore
     hook -always -once window ModeChange 'pop:insert:normal' %{
       unset-face window TrailingWhitespace
-      unset-face window ConsecutiveWhitespaces
+      unset-face window ConsecutiveWhitespace
     }
   }
 }
